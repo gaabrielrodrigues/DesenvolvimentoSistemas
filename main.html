@@ -1,98 +1,189 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
-    <title>.dev</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>.dev</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet" />
 
-    <style>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        * {
-            margin: 0;
-        }
+    body {
+      font-family: "SUSE", sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
 
-        body {
-            font-family: "SUSE", sans-serif;
-            height: 100vh;
-        }
-        .nav{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            height: auto;
-            width: 50vw;
-            border-radius: 25px;
-            padding: 10px;
-            position: fixed;
-            border: solid #f1f1f1 1px;
-            background: rgba(255, 255, 255, 0.3);
-            backdrop-filter: blur(10px);
-            font-size: small;
-        }
-        .nav_title {
-            margin: 0 40px;
-            font-weight: 600;
-        }
-        header {
-            width: 100%;
-            height: 10vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+    header {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(10px);
+      border: 1px solid #e1e1e1;
+      border-radius: 20px;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      width: 90%;
+      max-width: 800px;
+      z-index: 1000;
+      font-weight: 600;
+      font-size: large;
+    }
 
-        section {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-        }
+    .nav_title {
+      margin: 0 20px;
+    }
 
-        ul {
-            list-style: none;
-            gap: 10px;
-        }
-        a {
-            text-decoration: none;
-            color: #000;
-        }
-        a:hover {
-            color: #007bff;
-            transition: 0.3s;
-        }
-        footer {
-            width: 100%;
-            text-align: center;
-            bottom: 0;
-        }
+    main {
+      flex: 1;
+      margin-top: 100px;
+      padding: 40px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+    }
 
-    </style>
+    .content {
+      max-width: 400px;
+    }
 
+    img {
+      max-width: 400px;
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    .card_title {
+      text-decoration: none;
+      color: #007bff;
+      font-weight: 500;
+      transition: color 0.3s;
+      font-size: large;
+    }
+
+    .card_description {
+      font-size: normal;
+      color: #555;
+      margin: 5px 0 0 20px;
+    }
+
+    .card_line, .card_line_end {
+      margin-left: 5px;
+      height: auto;
+      width: 400px;
+      border-left: 2px solid #818181;
+      padding-bottom: 30px;
+    }
+
+    .card_line_end {
+        border-left: 2px dotted #818181;
+
+      width: auto;
+    }
+
+    span {
+        font-size: 12px;
+        color: #88888894;
+        margin-left: 10px;
+    }
+
+    a:hover {
+      color: #0056b3;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #666;
+      background-color: #fff;
+      border-top: 1px solid #ddd;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+      }
+
+      main {
+        flex-direction: column;
+      }
+
+      .content {
+        max-width: 90%;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="nav">
-            <h1 class="nav_title">Desenvolvimento de sistemas</h1>
-            <h2 class="nav_title">Senai</h2>
-        </div>
-    </header>
 
-    <section>
-        <img src="https://images.unsplash.com/photo-1745799326349-f14158d60a2c?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-        <main>
-            <ul>
-                <li><a target="_blank" href="./Aula 2/index.html">Aula 2 | Formulario</a></li>
-                <li><a target="_blank" href="./Aula 3/minha_pagina__gabriel.html">Aula 3 | Sobre mim</a></li>
-                <li><a target="_blank" href="./Aula 4 - CSS/main.html">Aula 4 | CSS</a></li>
-            </ul>
-        </main>
+  <header>
+    <div class="nav_title">Desenvolvimento de Sistemas</div>
+    <div class="nav_title">SENAI</div>
+  </header>
+
+  <main>
+    <div class="content">
+      <ul>
+        <li>
+            <a class="card_title" href="./Aula 2/index.html" target="_blank">Aula 2 | Formulário <span>Julho, 29</span></a>
+            <div class="card_line">
+                <p class="card_description">Desenvolver formulários com HTML semantico, utilizando as tags passadas em sala de aula.</p>
+            </div>
+        </li>
+        <li><a class="card_title" href="./Aula 3/minha_pagina__gabriel.html" target="_blank">
+            Aula 3 | Sobre Mim <span>Julho, 31</span></a>
+            <div class="card_line">
+                <p class="card_description">Desenvolver uma página focada em mostrar quem sou eu, incluindo habilidades, rotina e etc. Ao final enviar link do site ou arquivo HTML</p>
+            </div>
+        </li>
+        <li>
+            <a class="card_title"  href="./Aula 4 - CSS/main.html" target="_blank">Aula 4 | CSS <span>Agosto, 4</span></a>
+            <div class="card_line">
+                <p class="card_description">Desenvolver formulários com HTML semantico, utilizando as tags passadas em sala de aula.</p>
+            </div>
+        </li>
+        <li>
+            <div class="card_line_end">
+            </div>
+        </li>
         
-    </section>
+      </ul>
+    </div>
+  </main>
 
-    <footer>
-        <p>&copy; Gabriel Rodrigues 2025</p>
-    </footer>
+  <footer>
+    &copy; Gabriel Rodrigues 2025
+  </footer>
+
 </body>
 </html>
