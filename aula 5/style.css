@@ -7,6 +7,7 @@
 }
 
 * {
+  scroll-behavior: smooth;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -67,8 +68,7 @@ nav a:hover {
 main {
   max-width: var(--max-width);
   margin: auto;
-  margin-top: 5vh;
-  padding: 2rem 1.5rem;
+  padding: 0 1.5rem;
 }
 
 #home {
@@ -78,9 +78,6 @@ main {
   text-align: left;
 }
 
-#home > article {
-  flex: 1;
-}
 
 #home > article:last-child {
   max-width: 600px;
@@ -114,12 +111,13 @@ figure img {
   max-width: 70%;
 }
 
-#home .price_description {
+#home .price {
   color: #1d1d1f;
   font-weight: 600;
 }
 
 button {
+  margin-top: 2rem;
   background-color: var(--accent-color);
   color: white;
   border: none;
@@ -136,14 +134,23 @@ button:hover {
 
 #about {
   display: flex;
+  align-items: center;
   flex-direction: row;
   gap: 2rem;
-  margin-top: 4rem;
+  height: 80vh;
 }
 
 #about article p:first-of-type {
   font-weight: 600;
   font-size: 1.1rem;
+}
+
+#about article div {
+  font-weight: 600;
+  margin-top: 100px;
+  align-items: center;
+  display: flex;
+  gap: 1rem;
 }
 
 #about p {
@@ -152,7 +159,7 @@ button:hover {
 }
 
 #coments {
-  margin-top: 4rem;
+  margin: 10rem;
   text-align: center;
 }
 
@@ -163,6 +170,13 @@ button:hover {
   border: 1px solid #e5e5e5;
   border-radius: 12px;
   background-color: #fafafa;
+}
+
+#coments img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 1rem;
 }
 
 footer {
@@ -189,6 +203,10 @@ footer img {
 }
 
 @media (max-width: 1100px) {
+  main {
+    margin-top: 5vh;
+    padding: 2rem 1.5rem;
+  }
   #home {
     flex-direction: column;
     flex-wrap: wrap;
