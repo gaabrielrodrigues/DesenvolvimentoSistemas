@@ -44,7 +44,7 @@ header div {
 }
 
 header h1 {
-  font-weight: 600;
+  font-weight: 800;
   font-size: 1.2rem;
 }
 
@@ -78,7 +78,6 @@ main {
   text-align: left;
 }
 
-
 #home > article:last-child {
   max-width: 600px;
 }
@@ -97,7 +96,7 @@ figure img {
 
 #home h1 {
   font-size: 2.5rem;
-  font-weight: 600;
+  font-weight: 700;
   background: linear-gradient(90deg, #278ff7, #633ede, #d4263a, #e86a1c);
   background-clip: text;
   -webkit-background-clip: text;
@@ -135,10 +134,11 @@ button:hover {
 #about {
   display: flex;
   justify-content:center;
-  align-items: center;
+  align-items: start;
   flex-direction: row;
   gap: 2rem;
   height: 80vh;
+  margin-left: 5%;
 }
 
 #about article p:first-of-type {
