@@ -1,5 +1,17 @@
 {
   "dependencies": {
-    "express": "^5.1.0"
-  }
+    "cors": "^2.8.5"
+  },
+  "name": "exercicio1",
+  "description": "",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --watch server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

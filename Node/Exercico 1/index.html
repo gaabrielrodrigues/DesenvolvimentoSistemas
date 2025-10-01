@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <table id="list">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>TITULO</th>
+                <th>CONCLUIDA</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script>
+        fetch('http://localhost:3000/tarefas')
+            .then(response => response.json())
+            .then(data => {
+                console.log('Deu boa');
+                const list = document.getElementById('list').getElementsByTagName('tbody')[0];
+
+                data.forEach(task => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${task.id}</td>
+                        <td>${task.titulo}</td>
+                        <td>${task.concluida}</td>
+                    `;
+                    list.appendChild(row);
+                });
+            })
+            .catch(error => console.log(error));
+    </script>
+</body>
+
+</html>
